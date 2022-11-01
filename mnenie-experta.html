@@ -53,7 +53,7 @@
     <a class="nav-link" href="http://no-fake.club/videos.html">Видео от экспертов</a>
   </li>
   <li class="nav-item">
-   <a class="nav-link active" aria-current="page" href="http://no-fake.club/"><span>Вопрос эксперту</span><img src="img/red-dot.png"></a>
+   <a class="nav-link active" aria-current="page" href="http://no-fake.club/"><span>Вопрос к эксперту</span><img src="img/red-dot.png"></a>
   </li>
           <li class="nav-item dropdown">
 <div class="dropdown">
@@ -120,13 +120,13 @@
   </div>
   </div>
   </header>
- <div class="page-title">
+ <div class="page-title mnenie-background">
  <div class="container">
  <h1>Мнение экспертов</h1>
  </div>
  </div>
  
- <div class="page-content-without">
+ <div class="page-content-without mnenie-background">
   <div class="container">
   <div class="row">
   <div class="col-md-12" style="position:relative">
@@ -137,30 +137,31 @@
 связаться с производителем.</p>
 <span class="whi">Сформулируйте вопрос, далее выбирите категорию эксперта и нажмите кнопку «Получить ответ». </span>
 <div class="expert-form">
-<form class="row g-3">
+<form class="row g-3 needs-validation" novalidate>
   <div class="col-md-12">
   
   <div class="form-group">
     <label for="inputEmail5" class="form-label">Ваша почта</label>
-    <input type="email" class="form-control email-d" id="inputEmail5" placeholder="Введите ваш Email" required="">
-	<span class="error-boot"></span>
+    <input type="email" class="form-control email-d" id="inputEmail5" placeholder="Введите ваш Email" required>
+	<span class="error"></span>
 	</div>
 	
   <div class="form-group">
    <label for="vopros" class="form-label">Ваш вопрос</label>
-  <textarea id="vopros"class="form-control" aria-label="With textarea"placeholder="Введите здесь текст"></textarea>
+  <textarea id="vopros"class="form-control" aria-label="With textarea"placeholder="Введите здесь текст" required></textarea>
+  
 </div>
 
   <div class="form-group">
      <label for="experto" class="form-label">Эксперт</label>
 <select id="experto" class="form-select mb-3" aria-label=".form-select-lg example">
-  <option selected>Производитель</option>
-  <option value="1">Механик</option>
-  <option value="2">Юрист</option>
+  <option value="proizvoditel.png" selected>Производитель</option>
+  <option value="mehanik.png">Механик</option>
+  <option value="yurist.png">Юрист</option>
 </select>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" required>
   <label class="form-check-label" for="flexCheckIndeterminate">
     Я ознакомлен с <a href="http://no-fake.club/pravila.html">правилами</a>
   </label>
@@ -181,7 +182,7 @@
  </div>
 
  <div id="expr"class="img-expert">
- <img src="img/proizvoditel.png">
+ <img id="expert-img" src="img/proizvoditel.png">
  </div>
   </div>
  </div>
@@ -210,7 +211,7 @@
 <li><a href="http://no-fake.club/contacts.html">Контакты</a></li>
 <li><a href="http://no-fake.club/videos.html">Видео от экспертов</a></li>
 <li><a href="http://no-fake.club/documents.html">Документы</a></li>
-<li><a href="http://no-fake.club/mnenie-experta.html">Вопрос эксперту</a></li>
+<li><a href="http://no-fake.club/mnenie-experta.html">Вопрос к эксперту</a></li>
 <li><a href="http://no-fake.club/pravila.html">Правила общения</a></li>
 <li><a href="http://no-fake.club/o-proekte.html">О проекте</a></li>
 <ul>
@@ -261,7 +262,7 @@
 <div class="row">
 <div class="col-md-6">
 <a href="#" class="location"><img src="img/location.png"> 300027, Москва </a>
-<a href="mailto:admin@sintec.ru" class="mail"><img src="img/mail.png"> admin@sintec.ru</a>
+<a href="mailto:admin@no-fake.club" class="mail"><img src="img/mail.png"> admin@no-fake.club</a>
 </div>
 <div class="col-md-6 right-foot">
 <a href="#" class="social"><img src="img/rutube.png"></a>
@@ -275,8 +276,12 @@
 </div></div></div>
 </footer>
 <script>
+    document.getElementById("experto").addEventListener("change", function(){
+      document.getElementById('expert-img').src = "img/"+this.value;   
+    });
+
 $(function() {
-  $(".btn-ok-btn").on("click", validate);
+  $(".btn-ok-btn-expert").on("click", validate);
 
   // Validate email
   function validateEmail(email) {
@@ -291,7 +296,7 @@ $(function() {
 
   // validate email and send form after success validation
   function validate() {
-    var email = $(".email").val();
+    var email = $("#inputEmail5").val();
     var $error = $(".error");
     $error.text("");
 
@@ -316,7 +321,7 @@ $(function() {
   
   // send form
   function sendForm() {
-    $(".error").text("").fadeIn();
+    $(".error-boot").text("").fadeIn();
   }
 
   // validate email and send form after success validation
@@ -335,6 +340,26 @@ $(function() {
     return false;
   }
 });
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
 </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
