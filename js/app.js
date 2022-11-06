@@ -3049,6 +3049,26 @@
                 document.documentElement.classList.add(className);
             }));
         }
+        let isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+            }
+        };
         let _slideUp = (target, duration = 500, showmore = 0) => {
             if (!target.classList.contains("_slide")) {
                 target.classList.add("_slide");
@@ -3230,7 +3250,7 @@
                     }));
                     showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
                     document.addEventListener("click", showMoreActions);
-                    window.addEventListener("resize", showMoreActions);
+                    !isMobile.any() ? window.addEventListener("resize", showMoreActions) : null;
                     mdQueriesArray = dataMediaQueries(showMoreBlocks, "showmoreMedia");
                     if (mdQueriesArray && mdQueriesArray.length) {
                         mdQueriesArray.forEach((mdQueriesItem => {
@@ -3602,7 +3622,7 @@
                 };
                 this._this = this;
                 if (this.config.init) {
-                    const selectItems = data ? document.querySelectorAll(data) : document.querySelectorAll("select");
+                    const selectItems = data ? document.querySelectorAll(data) : document.querySelectorAll("[data-custom-select]");
                     if (selectItems.length) {
                         this.selectsInit(selectItems);
                         this.setLogging(`Проснулся, построил селектов: (${selectItems.length})`);
@@ -4050,37 +4070,60 @@
             const cabinetElement = document.querySelector("[data-cabinet]");
             if (cabinetElement) {
                 cabinetActions(cabinetElement, mediaMd3);
-                mediaMd3.addListener((function(e) {
+                window.addEventListener("resize", (function() {
                     cabinetActions(cabinetElement, mediaMd3);
                 }));
             }
+            const videoContainers = document.querySelectorAll("[data-video-container]");
+            if (videoContainers.length) videoContainers.forEach((videoContainer => {
+                videoActions(videoContainer);
+            }));
         }));
         function cabinetActions(cabinetElement, media) {
+            const cabinetLink = cabinetElement.querySelector("[data-cabinet-link]");
+            const cabinetBack = cabinetElement.querySelector("[data-cabinet-back]");
+            const cabinetForm = cabinetElement.querySelector("[data-cabinet-form]");
+            const cabinetNav = document.querySelector("[data-cabinet-nav]");
+            let cabinetNavHeight = 1.05 * cabinetNav.scrollHeight;
+            let cabinetFormHeight = 1.23 * cabinetForm.scrollHeight;
             if (media.matches) {
-                const cabinetLink = cabinetElement.querySelector("[data-cabinet-link]");
-                const cabinetBack = cabinetElement.querySelector("[data-cabinet-back]");
-                const cabinetForm = cabinetElement.querySelector("[data-cabinet-form]");
-                const cabinetNav = document.querySelector("[data-cabinet-nav]");
-                let cabinetNavHeight = 1.05 * cabinetNav.scrollHeight;
-                let cabinetFormHeight = 1.23 * cabinetForm.scrollHeight;
-                console.log(cabinetNavHeight);
-                cabinetLink.addEventListener("click", (e => {
-                    e.preventDefault();
-                    _slideUp(cabinetNav, 500, cabinetFormHeight);
+                console.log(media.matches);
+                cabinetLink.addEventListener("click", cabinetLinkListener);
+                cabinetBack.addEventListener("click", cabinetBackListener);
+            } else {
+                cabinetLink.removeEventListener("click", cabinetLinkListener);
+                cabinetBack.removeEventListener("click", cabinetBackListener);
+            }
+            function cabinetLinkListener(e) {
+                e.preventDefault();
+                if (media.matches) {
+                    cabinetForm.classList.add("_active");
                     cabinetElement.style = "background-color: transparent;";
                     setTimeout((() => {
-                        cabinetForm.classList.add("_active");
-                    }), 500);
-                }));
-                cabinetBack.addEventListener("click", (e => {
-                    e.preventDefault();
-                    cabinetElement.style = "";
-                    cabinetForm.classList.remove("_active");
-                    setTimeout((() => {
-                        _slideUp(cabinetNav, 500, cabinetNavHeight);
-                    }), 500);
-                }));
+                        _slideUp(cabinetNav, 500, cabinetFormHeight);
+                    }), 200);
+                }
             }
+            function cabinetBackListener(e) {
+                e.preventDefault();
+                if (media.matches) {
+                    cabinetElement.style = "";
+                    _slideUp(cabinetNav, 500, cabinetNavHeight);
+                    setTimeout((() => {
+                        cabinetForm.classList.remove("_active");
+                    }), 500);
+                }
+            }
+        }
+        function videoActions(videoContainer) {
+            let video = videoContainer.querySelector("[data-video]");
+            let videoPlay = videoContainer.querySelector("[data-video-play]");
+            videoPlay.addEventListener("click", (e => {
+                e.preventDefault();
+                videoPlay.hidden = true;
+                video.play();
+                video.controls = true;
+            }));
         }
         window["FLS"] = true;
         isWebp();
