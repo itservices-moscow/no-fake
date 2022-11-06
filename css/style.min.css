@@ -1,0 +1,10 @@
+.afterOpl::before {
+  content: 'Данный файл будет доступен после оплаты';
+  font-size: 25px;
+  font-weight: 700;
+}
+.afterOpl {
+  display: block;
+  max-width: 1230px;
+  margin: 30px auto;
+}
