@@ -209,6 +209,7 @@ font-style: normal;
 font-weight: 700;
 font-size: 23.9768px;
 line-height: 32px;
+text-decoration: none;
 /* or 133% */
 
 font-feature-settings: 'pnum' on, 'lnum' on;
@@ -294,6 +295,7 @@ color: #FFFFFF;
 .card-news-image {
     position: relative;
     max-width: 567px;
+    display: inline-block;
 }
 .card-news-image span {
     font-family: 'Roboto';
