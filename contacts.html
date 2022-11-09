@@ -336,7 +336,7 @@
 		</div>
 	</footer>
 	<script>
-		$(function() {
+		(function() {
 			$('.form-contacts #inputEmail5').focus(function() {
 				$('.form-contacts #inputEmail5').closest('.form-group').removeClass('_error');
 				$(".error-contact").text("");
@@ -391,7 +391,7 @@
 				return false;
 			}
 		});
-		// $(function() {
+		// (function() {
 		//   $(".btn-ok-btn-boot").on("click", validate);
 
 		//   // Validate email
