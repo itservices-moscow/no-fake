@@ -209,7 +209,6 @@ font-style: normal;
 font-weight: 700;
 font-size: 23.9768px;
 line-height: 32px;
-text-decoration: none;
 /* or 133% */
 
 font-feature-settings: 'pnum' on, 'lnum' on;
@@ -295,7 +294,6 @@ color: #FFFFFF;
 .card-news-image {
     position: relative;
     max-width: 567px;
-    display: inline-block;
 }
 .card-news-image span {
     font-family: 'Roboto';
@@ -2087,7 +2085,36 @@ footer label.form-label {
     display: none;
 }
 .bottom-header {
-    display: none;
+  position: fixed;
+  left: 0;
+  z-index: 99;
+  top: 59px;
+  height: 100vh;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease 0s;
+  transform: translateX(-150%);
+}
+.menu-open .bottom-header {
+  transform: none;
+}
+nav {
+  display: block;
+}
+.nav {
+  flex-direction: column;
+}
+.nav-link {
+  padding: 15px;
+  display: block;
+}
+
+.bottom-header .menu-link {
+  display: none;
+}
+ul.dropdown-menu.show {
+  padding-top: 0;
+  padding-left: 15px;
 }
 .mobile-header {
     display: block;
@@ -2738,6 +2765,7 @@ label {
     padding-top: 1.9375rem !important;
   }
 }
+
 
 
 @media (max-width: 47.99875em) {
