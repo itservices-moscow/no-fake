@@ -888,6 +888,7 @@ ul {
 }
 
 .tags-novosti__item {
+  text-transform: uppercase;
   color: #fff;
   text-align: center;
   border-radius: 0.25rem;

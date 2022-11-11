@@ -247,6 +247,10 @@ a.nav-link.active {
     display: flex;
     flex-direction: column;
 }
+a.nav-link.active span:not(:last-child) {
+  display: inline-block;
+  margin-bottom: 5px;
+}
 nav {
     display: flex;
     justify-content: space-between;
