@@ -783,6 +783,7 @@ font-family: 'Libre Franklin', sans-serif;
     font-size: 16px;
     line-height: 22px;
     color: #333333;
+    margin-bottom: 10px;
 }
 .page-content-without {
   padding: 25px 0;
@@ -2463,14 +2464,17 @@ display: flex;
 	    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 6.69176px;
+    font-size: 16px;
     line-height: 150%;
     color: #AFAFAF;
     flex: none;
     flex-grow: 0;
-      margin-right: 0;
+    margin-right: 0;
     padding-right: 0px;
-	
+}
+.conts-foot .mail svg {
+  width: 16px;
+  height: 16px;
 }
 svg.heart-ico {
     width: 16px;
@@ -2586,10 +2590,15 @@ label {
   }
   li.footer_socials a {
     padding: 0;
-    font-size: 7px;
+    font-size: 16px;
     color: #AFAFAF;
     display: flex;
     gap: 4px;
+    align-items: center;
+  }
+  li.footer_socials svg {
+    height: 16px;
+    width: 16px;
   }
   label.form-label_16 {
     font-size: 16px;
