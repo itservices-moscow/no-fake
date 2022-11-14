@@ -1192,15 +1192,15 @@ ul {
   z-index: 3;
 }
 
-@supports (font-size: clamp( 0.375rem , -0.025rem  +  1.3333333333vw , 1rem )) {
+@supports (font-size: clamp( 0.9375rem , 0.8975rem  +  0.1333333333vw , 1rem )) {
   .news-novosti__text {
-    font-size: clamp( 0.375rem , -0.025rem  +  1.3333333333vw , 1rem );
+    font-size: clamp( 0.9375rem , 0.8975rem  +  0.1333333333vw , 1rem );
   }
 }
 
-@supports not (font-size: clamp( 0.375rem , -0.025rem  +  1.3333333333vw , 1rem )) {
+@supports not (font-size: clamp( 0.9375rem , 0.8975rem  +  0.1333333333vw , 1rem )) {
   .news-novosti__text {
-    font-size: calc(0.375rem + 0.625 * (100vw - 30rem) / 46.875);
+    font-size: calc(0.9375rem + 0.0625 * (100vw - 30rem) / 46.875);
   }
 }
 
@@ -1220,15 +1220,15 @@ ul {
   border-top: 1px solid #ccc;
 }
 
-@supports (font-size: clamp( 0.6875rem , 0.4875rem  +  0.6666666667vw , 1rem )) {
+@supports (font-size: clamp( 0.9375rem , 0.8975rem  +  0.1333333333vw , 1rem )) {
   .mhz-videos_one .news-novosti__text {
-    font-size: clamp( 0.6875rem , 0.4875rem  +  0.6666666667vw , 1rem );
+    font-size: clamp( 0.9375rem , 0.8975rem  +  0.1333333333vw , 1rem );
   }
 }
 
-@supports not (font-size: clamp( 0.6875rem , 0.4875rem  +  0.6666666667vw , 1rem )) {
+@supports not (font-size: clamp( 0.9375rem , 0.8975rem  +  0.1333333333vw , 1rem )) {
   .mhz-videos_one .news-novosti__text {
-    font-size: calc(0.6875rem + 0.3125 * (100vw - 30rem) / 46.875);
+    font-size: calc(0.9375rem + 0.0625 * (100vw - 30rem) / 46.875);
   }
 }
 
@@ -1315,18 +1315,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@supports (gap: clamp( 0.875rem , 0.715rem  +  0.5333333333vw , 1.125rem )) {
-  .info-newsNovosti {
-    gap: clamp( 0.875rem , 0.715rem  +  0.5333333333vw , 1.125rem );
-  }
-}
-
-@supports not (gap: clamp( 0.875rem , 0.715rem  +  0.5333333333vw , 1.125rem )) {
-  .info-newsNovosti {
-    gap: calc(0.875rem + 0.25 * (100vw - 30rem) / 46.875);
-  }
+  /*@include adaptiveValue("gap", 18, 14, 1230, 480, 1);*/
 }
 
 .info-newsNovosti__item {
@@ -1337,6 +1326,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.25rem;
+  padding-right: 1.25rem;
 }
 
 .info-newsNovosti__item svg {
@@ -2200,6 +2190,37 @@ ul {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.main-videos__share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@supports (padding-top: clamp( 0.625rem , 0.2083333333rem  +  1.3888888889vw , 1.875rem )) {
+  .main-videos__share {
+    padding-top: clamp( 0.625rem , 0.2083333333rem  +  1.3888888889vw , 1.875rem );
+  }
+}
+
+@supports not (padding-top: clamp( 0.625rem , 0.2083333333rem  +  1.3888888889vw , 1.875rem )) {
+  .main-videos__share {
+    padding-top: calc(0.625rem + 1.25 * (100vw - 30rem) / 90);
+  }
+}
+
+.main-videos__share span {
+  color: #E83232;
+  font-weight: 500;
+}
+
+.main-videos__share .ya-share2__container_size_m .ya-share2__badge .ya-share2__icon {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+}
+
 .last-videos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2259,6 +2280,9 @@ ul {
   position: relative;
   padding-bottom: 56.25%;
   background-color: #EEEEEE;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .last-videos__poster svg {
@@ -2761,6 +2785,15 @@ ul {
   margin: 30px auto;
 }
 
+svg.like {
+  cursor: pointer;
+}
+
+.in-wishlist svg path,
+svg.like.is-active path {
+  stroke: #E83232;
+}
+
 @media (min-width: 37.5em) {
   [data-menu-close] {
     display: none;
@@ -3025,6 +3058,10 @@ ul {
     padding: 0 2.8125rem 2rem;
   }
 
+  .mhz-news_one .main-videos__main .news-novosti__item::before {
+    display: none;
+  }
+
   .news-novosti__item {
     gap: 0.75rem;
     border-radius: 0.375rem;
@@ -3106,6 +3143,11 @@ ul {
             flex-direction: column;
     padding-left: 0.1875rem;
     padding-right: 0.1875rem;
+  }
+
+  .main-videos__head {
+    margin: 0 -0.9375rem;
+    padding: 0 2.8125rem 2rem;
   }
 
   .sidebar-videos {

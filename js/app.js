@@ -4568,7 +4568,7 @@
                     }));
                 }
             }
-            let experto = document.getElementById("experto");
+            let experto = document.querySelector(".select_expert");
             if (experto) {
                 let expertImg = document.getElementById("expert-img");
                 if (expertImg) experto.addEventListener("change", (function() {
