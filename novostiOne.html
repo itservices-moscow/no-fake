@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css?_v=20221106170620" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-	<link href="files/styles.css?_v=20221106170620" rel="stylesheet">
-	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js?_v=20221106170620"></script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20221106170620">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css?_v=20221115124541" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link href="files/styles.css?_v=20221115124541" rel="stylesheet">
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js?_v=20221115124541"></script>
+	<link rel="stylesheet" href="css/style.min.css?_v=20221115124541">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,7 +82,9 @@
 				<div class="container">
 					<div class="row" style="padding: 0 15px;">
 						<div class="col-2">
-							<a href="home.html"><img src="img/bottom-logo.png" style="width: 45px;"></a>
+							<!-- <a href="home.html"><img src="img/bottom-logo.png" style="width: 45px;"></a> -->
+							<button type="button" class="menu__icon icon-menu"><span></span></button>
+							<div data-menu-close></div>
 						</div>
 						<div class="col-4">
 							<a href="#" class="help-a">
@@ -111,7 +113,245 @@
 			</div>
 		</header>
 		<main class="page mhz-videos mhz-news_one">
-      <span class="afterOpl"></span>
+			<section class="mhz-videos__main main-videos">
+				<div class="main-videos__container">
+					<div class="main-videos__head">
+						<h1 class="main-videos__title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h1>
+						<div class="main-videos__info bottom-newsNovosti">
+							<div class="bottom-newsNovosti__author">
+								<div class="bottom-newsNovosti__avatar"></div>
+								<div class="bottom-newsNovosti__name">
+									Имя Фамилия
+								</div>
+							</div>
+							<time class="bottom-newsNovosti__date">Авг 10, 2022</time>
+						</div>
+					</div>
+					<div class="main-videos__body">
+						<div class="main-videos__main">
+							<div class="news-novosti__item">
+								<div class="news-novosti__image">
+								</div>
+								<div class="news-novosti__info info-newsNovosti">
+									<div class="info-newsNovosti__item">
+										<div class="info-newsNovosti__icon">
+											<svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M12.4378 20.4304C12.0748 20.5621 11.4771 20.5621 11.1142 20.4304C8.01866 19.3443 1.10181 14.8131 1.10181 7.13304C1.10181 3.74286 3.75967 1 7.03664 1C8.97934 1 10.6979 1.96549 11.776 3.4576C12.8541 1.96549 14.5833 1 16.5153 1C19.7923 1 22.4501 3.74286 22.4501 7.13304C22.4501 14.8131 15.5333 19.3443 12.4378 20.4304Z" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</div>
+										<div class="info-newsNovosti__text">4.2k</div>
+									</div>
+									<div class="info-newsNovosti__item">
+										<div class="info-newsNovosti__icon">
+											<svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M7.81179 18.4373L7.81182 18.4372L7.80841 18.4325C7.66901 18.2377 7.4716 18.0836 7.27684 17.9784C7.08445 17.8746 6.84462 17.7915 6.60181 17.7915H5.10181C2.65152 17.7915 0.601807 15.6423 0.601807 12.9142V11.8344V5.37732C0.601807 2.64925 2.65152 0.5 5.10181 0.5H15.1018C17.5521 0.5 19.6018 2.64925 19.6018 5.37732V12.9142C19.6018 15.6423 17.5521 17.7915 15.1018 17.7915H13.6018C13.1171 17.7915 12.6694 18.0428 12.3929 18.4357L12.3918 18.4373L10.8918 20.586L10.8911 20.587C10.6346 20.9563 10.3409 21.0849 10.1018 21.0849C9.86272 21.0849 9.56897 20.9563 9.31247 20.587L9.31179 20.586L7.81179 18.4373ZM4.60181 9.71806C4.60181 10.5479 5.2271 11.2978 6.10181 11.2978C6.97652 11.2978 7.60181 10.5479 7.60181 9.71806C7.60181 8.88487 6.9634 8.13827 6.10181 8.13827C5.24022 8.13827 4.60181 8.88487 4.60181 9.71806ZM8.60181 9.71806C8.60181 10.5479 9.2271 11.2978 10.1018 11.2978C10.9765 11.2978 11.6018 10.5479 11.6018 9.71806C11.6018 8.88487 10.9634 8.13827 10.1018 8.13827C9.24022 8.13827 8.60181 8.88487 8.60181 9.71806ZM12.6018 9.71806C12.6018 10.5479 13.2271 11.2978 14.1018 11.2978C14.9765 11.2978 15.6018 10.5479 15.6018 9.71806C15.6018 8.88487 14.9634 8.13827 14.1018 8.13827C13.2402 8.13827 12.6018 8.88487 12.6018 9.71806Z" stroke="#666666" />
+											</svg>
+										</div>
+										<div class="info-newsNovosti__text">273</div>
+									</div>
+									<div class="info-newsNovosti__item">
+										<div class="info-newsNovosti__icon">
+											<svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M7.78428 0.00609466C5.847 0.235602 4.04829 1.13181 2.1395 2.81869C1.47336 3.4074 0.374628 4.5967 0.0892738 5.03798C-0.0297579 5.222 -0.0297579 5.47922 0.0892738 5.66325C0.24263 5.90042 0.880998 6.64068 1.33323 7.10581C2.95627 8.77512 4.76462 9.94701 6.46838 10.4337C7.20966 10.6454 7.5841 10.696 8.40955 10.696C9.23501 10.696 9.60945 10.6454 10.3507 10.4337C12.3483 9.86309 14.5429 8.30478 16.2946 6.21293C16.7741 5.64034 16.815 5.57265 16.815 5.35061C16.815 5.12857 16.7741 5.06088 16.2946 4.4883C14.5546 2.41052 12.3659 0.850638 10.3841 0.276014C9.71907 0.0831676 9.27963 0.0178762 8.55764 0.00458093C8.19564 -0.00206668 7.84763 -0.00140858 7.78428 0.00609466ZM9.21582 1.15531C10.7668 1.38893 12.4551 2.30143 14.0774 3.78279C14.572 4.23434 15.5508 5.27745 15.5508 5.35292C15.5508 5.36539 15.4373 5.50535 15.2987 5.66397C13.3836 7.85452 11.202 9.24677 9.21582 9.54591C8.79399 9.60946 8.02508 9.60946 7.60328 9.54591C6.17325 9.33049 4.64381 8.55055 3.12766 7.26354C2.5792 6.79798 1.2683 5.44931 1.2683 5.35061C1.2683 5.33689 1.38177 5.19587 1.52045 5.03725C3.42289 2.86118 5.60347 1.46367 7.57468 1.15712C7.9742 1.09499 8.80923 1.09407 9.21582 1.15531ZM7.94883 2.04658C6.52377 2.30745 5.51057 3.2345 5.16496 4.59371C5.07607 4.94336 5.07607 5.75786 5.16496 6.10752C5.48276 7.35734 6.40283 8.2774 7.65265 8.59521C8.0023 8.68409 8.8168 8.68409 9.16646 8.59521C10.4163 8.2774 11.3363 7.35734 11.6541 6.10752C11.7026 5.91707 11.7169 5.7442 11.7169 5.35061C11.7169 4.95702 11.7026 4.78415 11.6541 4.59371C11.3405 3.36024 10.4493 2.45554 9.21582 2.11829C8.99112 2.05688 8.15207 2.0094 7.94883 2.04658ZM8.93517 3.19942C9.55258 3.33701 10.113 3.78872 10.4008 4.38072C10.5713 4.7314 10.6235 5.00204 10.6067 5.44934C10.5907 5.87268 10.5095 6.16155 10.3124 6.49588C10.1721 6.73374 9.79268 7.11318 9.55482 7.25344C8.86166 7.66217 7.95745 7.66217 7.26429 7.25344C7.02642 7.11318 6.64698 6.73374 6.50672 6.49588C6.09799 5.80271 6.09799 4.89851 6.50672 4.20535C6.64698 3.96748 7.02642 3.58804 7.26429 3.44778C7.76197 3.15433 8.34436 3.06778 8.93517 3.19942Z" fill="#666666" />
+											</svg>
+										</div>
+										<div class="info-newsNovosti__text">273</div>
+									</div>
+									<div class="info-newsNovosti__item info-newsNovosti__item_save">
+										<div class="info-newsNovosti__icon">
+											<svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M7.10181 8.00059C8.71999 9.26725 10.4836 9.26725 12.1018 8.00059M14.3142 1.35059H4.87958C2.79496 1.35059 1.10181 3.00305 1.10181 5.0164V18.3976C1.10181 20.107 2.36433 20.8288 3.91067 20.0026L8.68672 17.4289C9.19565 17.1535 10.0178 17.1535 10.5169 17.4289L15.2929 20.0026C16.8393 20.8383 18.1018 20.1165 18.1018 18.3976V5.0164C18.092 3.00305 16.3989 1.35059 14.3142 1.35059Z" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="news-novosti__content">
+									<div class="news-novosti__text">
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus.</p>
+										<br>
+										<img src="img/placeholder_img.png" style="width: calc(50% - 11px); margin-right: 15px;" alt="image">
+										<img src="img/placeholder_img.png" style="width: calc(50% - 11px);" alt="image">
+										<br>
+										<br>
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus.</p>
+									</div>
+								</div>
+							</div>
+							<div class="main-videos__share">
+								<span>Поделиться: </span>
+								<div class="ya-share2" data-curtain data-shape="round" data-color-scheme="whiteblack" data-services="vkontakte,odnoklassniki,telegram,viber,whatsapp"></div>
+							</div>
+							<div class="main-videos__comments comments-videos">
+								<div class="comments-videos__title">Комментарии</div>
+								<div class="comments-videos__body">
+									<div class="comments-videos__item">
+										<div class="comments-videos__avatar"></div>
+										<div class="comments-videos__content">
+											<div class="comments-videos__name">Имя Фамилия</div>
+											<time class="comments-videos__date">Авг 2, 2022, 10:10</time>
+											<p class="comments-videos__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div>
+									</div>
+									<div class="comments-videos__item">
+										<div class="comments-videos__avatar"></div>
+										<div class="comments-videos__content">
+											<div class="comments-videos__name">Имя Фамилия</div>
+											<time class="comments-videos__date">Авг 2, 2022, 10:10</time>
+											<p class="comments-videos__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div>
+									</div>
+								</div>
+								<form action="#" class="comments-videos__form">
+									<h6 class="comments-videos__subtitle">Написать сообщение</h6>
+									<textarea placeholder="Введите ваш текст" class="comments-videos__textarea" data-required></textarea>
+									<button type="submit" class="comments-videos__submit">Отправить</button>
+								</form>
+							</div>
+						</div>
+						<aside class="main-videos__sidebar sidebar-videos">
+							<div class="sidebar-novosti__last last-novosti">
+								<div data-showmore="items" class="last-novosti__showmore showmore-novosti">
+									<h3 class="showmore-novosti__h3">Последние новости</h3>
+									<ul data-showmore-content="5" class="showmore-novosti__content">
+										<li>
+											<a href="novostiOne.html" class="showmore-novosti__item">
+												<span class="showmore-novosti__image">
+													<img src="img/lastnews_1.png" alt="image">
+												</span>
+												<h6 class="showmore-novosti__title">Советы экспертов: Как отличить подделку от оригинала</h6>
+												<time class="showmore-novosti__date">Авг 10, 2022</time>
+											</a>
+										</li>
+										<li>
+											<a href="novostiOne.html" class="showmore-novosti__item">
+												<span class="showmore-novosti__image">
+													<img src="img/lastnews_2.png" alt="image">
+												</span>
+												<h6 class="showmore-novosti__title">Выявленные подделки. Ежедневно обновляемый реестр</h6>
+												<time class="showmore-novosti__date">Авг 10, 2022</time>
+											</a>
+										</li>
+										<li>
+											<a href="novostiOne.html" class="showmore-novosti__item">
+												<span class="showmore-novosti__image">
+													<img src="img/lastnews_3.png" alt="image">
+												</span>
+												<h6 class="showmore-novosti__title">Черный список. Поставщики, торгующие подделкой</h6>
+												<time class="showmore-novosti__date">Авг 10, 2022</time>
+											</a>
+										</li>
+										<li>
+											<a href="novostiOne.html" class="showmore-novosti__item">
+												<span class="showmore-novosti__image">
+													<img src="img/lastnews_4.png" alt="image">
+												</span>
+												<h6 class="showmore-novosti__title">Как предостеречься от контрафакта</h6>
+												<time class="showmore-novosti__date">Авг 10, 2022</time>
+											</a>
+										</li>
+										<li>
+											<a href="novostiOne.html" class="showmore-novosti__item">
+												<span class="showmore-novosti__image">
+													<img src="img/lastnews_5.png" alt="image">
+												</span>
+												<h6 class="showmore-novosti__title">МВД опубликовало памятку: «Стоп контрафакт!»</h6>
+												<time class="showmore-novosti__date">Авг 10, 2022</time>
+											</a>
+										</li>
+										<li>
+											<a href="novostiOne.html" class="showmore-novosti__item">
+												<span class="showmore-novosti__image">
+													<img src="img/lastnews_1.png" alt="image">
+												</span>
+												<h6 class="showmore-novosti__title">Советы экспертов: Как отличить подделку от оригинала</h6>
+												<time class="showmore-novosti__date">Авг 10, 2022</time>
+											</a>
+										</li>
+										<li>
+											<a href="novostiOne.html" class="showmore-novosti__item">
+												<span class="showmore-novosti__image">
+													<img src="img/lastnews_2.png" alt="image">
+												</span>
+												<h6 class="showmore-novosti__title">Выявленные подделки. Ежедневно обновляемый реестр</h6>
+												<time class="showmore-novosti__date">Авг 10, 2022</time>
+											</a>
+										</li>
+										<li>
+											<a href="novostiOne.html" class="showmore-novosti__item">
+												<span class="showmore-novosti__image">
+													<img src="img/lastnews_3.png" alt="image">
+												</span>
+												<h6 class="showmore-novosti__title">Черный список. Поставщики, торгующие подделкой</h6>
+												<time class="showmore-novosti__date">Авг 10, 2022</time>
+											</a>
+										</li>
+										<li>
+											<a href="novostiOne.html" class="showmore-novosti__item">
+												<span class="showmore-novosti__image">
+													<img src="img/lastnews_4.png" alt="image">
+												</span>
+												<h6 class="showmore-novosti__title">Как предостеречься от контрафакта</h6>
+												<time class="showmore-novosti__date">Авг 10, 2022</time>
+											</a>
+										</li>
+										<li>
+											<a href="novostiOne.html" class="showmore-novosti__item">
+												<span class="showmore-novosti__image">
+													<img src="img/lastnews_5.png" alt="image">
+												</span>
+												<h6 class="showmore-novosti__title">МВД опубликовало памятку: «Стоп контрафакт!»</h6>
+												<time class="showmore-novosti__date">Авг 10, 2022</time>
+											</a>
+										</li>
+									</ul>
+									<button hidden data-showmore-button type="button" class="showmore-novosti__more">
+										<span>
+											<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M11.9992 17.8109L3.29224 9.11234L4.70624 7.69971L11.9992 14.9856L19.2922 7.69971L20.7062 9.11234L11.9992 17.8109Z" fill="#E83232" />
+											</svg>
+										</span>
+										<span></span>
+									</button>
+								</div>
+							</div>
+							<div class="categories-novosti__item news-novosti__item">
+								<a href="novostiOne.html" class="news-novosti__image">
+									<div class="news-novosti__tags">
+										<div class="news-novosti__tag">Авто</div>
+									</div>
+								</a>
+								<div class="news-novosti__content">
+									<a href="novostiOne.html" class="news-novosti__title">Lorem ipsum dolor sit amet, consectetur adipiscing.</a>
+									<div class="news-novosti__borders borders-newsNovosti">
+										<div class="borders-newsNovosti__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+										<div class="borders-newsNovosti__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+										<div class="borders-newsNovosti__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+										<div class="borders-newsNovosti__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+										<div class="borders-newsNovosti__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+									</div>
+								</div>
+							</div>
+							<div class="categories-novosti__item news-novosti__item">
+								<a href="novostiOne.html" class="news-novosti__image">
+									<div class="news-novosti__tags">
+										<div class="news-novosti__tag">Масла</div>
+									</div>
+								</a>
+								<div class="news-novosti__content">
+									<a href="novostiOne.html" class="news-novosti__title">Lorem ipsum dolor sit amet, consectetur adipiscing.</a>
+									<div class="news-novosti__borders borders-newsNovosti">
+										<div class="borders-newsNovosti__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+										<div class="borders-newsNovosti__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+										<div class="borders-newsNovosti__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+										<div class="borders-newsNovosti__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+										<div class="borders-newsNovosti__item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+									</div>
+								</div>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<footer>
@@ -130,7 +370,7 @@
 									<h2>Меню</h2>
 									<ul>
 										<li><a href="home.html">Главная</a></li>
-										<li><a href="profile.html">Профиль</a></li>
+										<li><a href="cabinet.html">Профиль</a></li>
 										<li><a href="novosti.html">Новости и события</a></li>
 										<li><a href="contacts.html">Контакты</a></li>
 										<li><a href="expertsVideo.html">Видео от экспертов</a></li>
@@ -139,13 +379,13 @@
 										<li><a href="pravila.html">Правила общения</a></li>
 										<li><a href="o-proekte.html">О проекте</a></li>
 										<li class="_mmd3dn footer_socials">
-											<a href="#contactsMap">
-												<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M5.73455 1.15942C4.84748 1.16044 3.99703 1.51327 3.36977 2.14053C2.74252 2.76778 2.38968 3.61823 2.38867 4.5053C2.38867 7.06394 5.27377 9.9782 5.39662 10.101L5.73455 10.439L6.07248 10.101C6.19532 9.9782 9.08043 7.06394 9.08043 4.5053C9.07942 3.61823 8.72658 2.76778 8.09932 2.14053C7.47207 1.51327 6.62162 1.16044 5.73455 1.15942ZM5.73455 9.06191C5.00371 8.24552 3.34464 6.20357 3.34464 4.5053C3.34464 3.87146 3.59643 3.26357 4.04463 2.81538C4.49282 2.36718 5.10071 2.11539 5.73455 2.11539C6.36839 2.11539 6.97628 2.36718 7.42447 2.81538C7.87267 3.26357 8.12446 3.87146 8.12446 4.5053C8.12446 6.20023 6.46443 8.24456 5.73455 9.06191Z" fill="#AFAFAF" />
-													<path d="M5.73473 3.07129C5.45112 3.07129 5.17388 3.15539 4.93807 3.31295C4.70226 3.47052 4.51847 3.69447 4.40993 3.95649C4.3014 4.21851 4.27301 4.50683 4.32833 4.78499C4.38366 5.06314 4.52023 5.31865 4.72078 5.51919C4.92132 5.71973 5.17682 5.8563 5.45498 5.91163C5.73314 5.96696 6.02146 5.93856 6.28348 5.83003C6.5455 5.7215 6.76945 5.53771 6.92701 5.3019C7.08458 5.06608 7.16868 4.78884 7.16868 4.50524C7.16868 4.12493 7.0176 3.7602 6.74868 3.49128C6.47977 3.22237 6.11504 3.07129 5.73473 3.07129ZM5.73473 4.98322C5.64019 4.98322 5.54778 4.95519 5.46918 4.90266C5.39057 4.85014 5.32931 4.77549 5.29313 4.68815C5.25695 4.60081 5.24749 4.50471 5.26593 4.41199C5.28437 4.31927 5.3299 4.2341 5.39675 4.16725C5.46359 4.10041 5.54876 4.05488 5.64148 4.03644C5.7342 4.018 5.83031 4.02746 5.91765 4.06364C6.00499 4.09982 6.07964 4.16108 6.13216 4.23968C6.18468 4.31829 6.21271 4.4107 6.21271 4.50524C6.21271 4.63201 6.16235 4.75358 6.07271 4.84322C5.98308 4.93286 5.8615 4.98322 5.73473 4.98322Z" fill="#AFAFAF" />
-												</svg>
-												<span>300027, Москва</span>
-											</a>
+											<!-- <a href="contacts.html">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.73455 1.15942C4.84748 1.16044 3.99703 1.51327 3.36977 2.14053C2.74252 2.76778 2.38968 3.61823 2.38867 4.5053C2.38867 7.06394 5.27377 9.9782 5.39662 10.101L5.73455 10.439L6.07248 10.101C6.19532 9.9782 9.08043 7.06394 9.08043 4.5053C9.07942 3.61823 8.72658 2.76778 8.09932 2.14053C7.47207 1.51327 6.62162 1.16044 5.73455 1.15942ZM5.73455 9.06191C5.00371 8.24552 3.34464 6.20357 3.34464 4.5053C3.34464 3.87146 3.59643 3.26357 4.04463 2.81538C4.49282 2.36718 5.10071 2.11539 5.73455 2.11539C6.36839 2.11539 6.97628 2.36718 7.42447 2.81538C7.87267 3.26357 8.12446 3.87146 8.12446 4.5053C8.12446 6.20023 6.46443 8.24456 5.73455 9.06191Z" fill="#AFAFAF"/>
+                      <path d="M5.73473 3.07129C5.45112 3.07129 5.17388 3.15539 4.93807 3.31295C4.70226 3.47052 4.51847 3.69447 4.40993 3.95649C4.3014 4.21851 4.27301 4.50683 4.32833 4.78499C4.38366 5.06314 4.52023 5.31865 4.72078 5.51919C4.92132 5.71973 5.17682 5.8563 5.45498 5.91163C5.73314 5.96696 6.02146 5.93856 6.28348 5.83003C6.5455 5.7215 6.76945 5.53771 6.92701 5.3019C7.08458 5.06608 7.16868 4.78884 7.16868 4.50524C7.16868 4.12493 7.0176 3.7602 6.74868 3.49128C6.47977 3.22237 6.11504 3.07129 5.73473 3.07129ZM5.73473 4.98322C5.64019 4.98322 5.54778 4.95519 5.46918 4.90266C5.39057 4.85014 5.32931 4.77549 5.29313 4.68815C5.25695 4.60081 5.24749 4.50471 5.26593 4.41199C5.28437 4.31927 5.3299 4.2341 5.39675 4.16725C5.46359 4.10041 5.54876 4.05488 5.64148 4.03644C5.7342 4.018 5.83031 4.02746 5.91765 4.06364C6.00499 4.09982 6.07964 4.16108 6.13216 4.23968C6.18468 4.31829 6.21271 4.4107 6.21271 4.50524C6.21271 4.63201 6.16235 4.75358 6.07271 4.84322C5.98308 4.93286 5.8615 4.98322 5.73473 4.98322Z" fill="#AFAFAF"/>
+                    </svg>
+                    <span>300027, Москва</span>
+                  </a> -->
 											<a href="mailto:admin@sintec.ru">
 												<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M1.75977 1.91187V9.55959H11.3194V1.91187H1.75977ZM5.57454 6.5483L6.53959 7.29729L7.50464 6.5483L10.0767 8.60362H3.00252L5.57454 6.5483ZM2.71573 7.60894V4.32281L4.7983 5.94269L2.71573 7.60894ZM8.28088 5.94269L10.3635 4.32329V7.60894L8.28088 5.94269ZM10.3635 2.86783V3.11208L6.53959 6.08609L2.71573 3.11208V2.86783H10.3635Z" fill="#AFAFAF" />
@@ -190,7 +430,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
-							<a href="#" class="location"><img src="img/location.png">300027, Москва</a>
+							<!-- <a href="#" class="location"><img src="img/location.png">300027, Москва</a> -->
 							<a href="mailto:admin@no-fake.club" class="mail"><img src="img/mail.png">admin@no-fake.club</a>
 						</div>
 						<div class="col-md-6 right-foot">
@@ -205,20 +445,11 @@
 			</div>
 		</footer>
 	</div>
-	<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
-			</div>
-		</div>
-	</div>
-</div> -->
+	<script src="https://yastatic.net/share2/share.js?_v=20221115124541"></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js?_v=20221106170620" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js?_v=20221106170620" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20221106170620"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js?_v=20221115124541" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js?_v=20221115124541" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20221115124541"></script>
 </body>
 
 </html>

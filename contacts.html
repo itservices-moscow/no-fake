@@ -6,13 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css?_v=20221110020650" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-	<link href="files/styles.css?_v=20221110020650" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js?_v=20221110020650"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css?_v=20221115124541" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link href="files/styles.css?_v=20221115124541" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js?_v=20221115124541"></script>
 	<title>Экспертная лаборатория СТОП! Контрафакт</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap&_v=20221110020650" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap&_v=20221115124541" rel="stylesheet">
 	<style>
 		button.btn.btn-primary {
 			font-family: 'Roboto';
@@ -64,7 +64,10 @@
 					<nav>
 						<ul class="nav">
 							<li class="nav-item">
-								<a class="nav-link " href="home.html">Главная</a>
+								<a class="nav-link active" href="home.html">
+									<span>Главная</span>
+									<img src="img/red-dot.png" alt="image">
+								</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="novosti.html">Новости и события</a>
@@ -148,9 +151,9 @@
 					<div class="left-contact">
 						<h2>По всем вопросам:</h2>
 						<a href="mailto:admin@no-fake.club">admin@no-fake.club</a>
-						<h3>Мы находимся по адресу:</h3>
-						<p>249032, Россия, Калужская обл., г. Обнинск,
-							Киевское ш. 57</p>
+						<!-- <h3>Мы находимся по адресу:</h3>
+<p>249032, Россия, Калужская обл., г. Обнинск, 
+Киевское ш. 57</p> -->
 					</div>
 				</div>
 				<div class="col-md-7">
@@ -161,7 +164,7 @@
 
 								<div class="form-group form-group_mb">
 									<label for="inputEmail5" class="form-label">Ваша почта</label>
-									<input type="email" class="form-control email-contact" id="inputEmail5" placeholder="Введите ваш Email" required="">
+									<input type="email" class="form-control email-contact inputEmail5" placeholder="Введите ваш Email" required="">
 									<span class="error-contact"></span>
 								</div>
 								<div class="form-group">
@@ -220,12 +223,11 @@
 				</div>
 
 			</div>
-			<div class="col-md-12">
-				<div class="map" id="contactsMap">
-					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7ab53ef852b81d9b4a85587d92adb5097a88e9159369d518ce9f5c7d827ef8de&amp;width=100%25&amp;height=556&amp;lang=ru_RU&amp;scroll=true&_v=20221110020650"></script>
-				</div>
-
-			</div>
+			<!-- <div class="col-md-12">
+  <div class="map" id="contactsMap">
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7ab53ef852b81d9b4a85587d92adb5097a88e9159369d518ce9f5c7d827ef8de&amp;width=100%25&amp;height=556&amp;lang=ru_RU&amp;scroll=true&_v=20221115124541"></script>
+  </div>
+</div> -->
 		</div>
 	</div>
 
@@ -258,13 +260,13 @@
 									<li><a href="pravila.html">Правила общения</a></li>
 									<li><a href="o-proekte.html">О проекте</a></li>
 									<li class="_mmd3dn footer_socials">
-										<a href="#contactsMap">
-											<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M5.73455 1.15942C4.84748 1.16044 3.99703 1.51327 3.36977 2.14053C2.74252 2.76778 2.38968 3.61823 2.38867 4.5053C2.38867 7.06394 5.27377 9.9782 5.39662 10.101L5.73455 10.439L6.07248 10.101C6.19532 9.9782 9.08043 7.06394 9.08043 4.5053C9.07942 3.61823 8.72658 2.76778 8.09932 2.14053C7.47207 1.51327 6.62162 1.16044 5.73455 1.15942ZM5.73455 9.06191C5.00371 8.24552 3.34464 6.20357 3.34464 4.5053C3.34464 3.87146 3.59643 3.26357 4.04463 2.81538C4.49282 2.36718 5.10071 2.11539 5.73455 2.11539C6.36839 2.11539 6.97628 2.36718 7.42447 2.81538C7.87267 3.26357 8.12446 3.87146 8.12446 4.5053C8.12446 6.20023 6.46443 8.24456 5.73455 9.06191Z" fill="#AFAFAF" />
-												<path d="M5.73473 3.07129C5.45112 3.07129 5.17388 3.15539 4.93807 3.31295C4.70226 3.47052 4.51847 3.69447 4.40993 3.95649C4.3014 4.21851 4.27301 4.50683 4.32833 4.78499C4.38366 5.06314 4.52023 5.31865 4.72078 5.51919C4.92132 5.71973 5.17682 5.8563 5.45498 5.91163C5.73314 5.96696 6.02146 5.93856 6.28348 5.83003C6.5455 5.7215 6.76945 5.53771 6.92701 5.3019C7.08458 5.06608 7.16868 4.78884 7.16868 4.50524C7.16868 4.12493 7.0176 3.7602 6.74868 3.49128C6.47977 3.22237 6.11504 3.07129 5.73473 3.07129ZM5.73473 4.98322C5.64019 4.98322 5.54778 4.95519 5.46918 4.90266C5.39057 4.85014 5.32931 4.77549 5.29313 4.68815C5.25695 4.60081 5.24749 4.50471 5.26593 4.41199C5.28437 4.31927 5.3299 4.2341 5.39675 4.16725C5.46359 4.10041 5.54876 4.05488 5.64148 4.03644C5.7342 4.018 5.83031 4.02746 5.91765 4.06364C6.00499 4.09982 6.07964 4.16108 6.13216 4.23968C6.18468 4.31829 6.21271 4.4107 6.21271 4.50524C6.21271 4.63201 6.16235 4.75358 6.07271 4.84322C5.98308 4.93286 5.8615 4.98322 5.73473 4.98322Z" fill="#AFAFAF" />
-											</svg>
-											<span>300027, Москва</span>
-										</a>
+										<!-- <a href="#contactsMap">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.73455 1.15942C4.84748 1.16044 3.99703 1.51327 3.36977 2.14053C2.74252 2.76778 2.38968 3.61823 2.38867 4.5053C2.38867 7.06394 5.27377 9.9782 5.39662 10.101L5.73455 10.439L6.07248 10.101C6.19532 9.9782 9.08043 7.06394 9.08043 4.5053C9.07942 3.61823 8.72658 2.76778 8.09932 2.14053C7.47207 1.51327 6.62162 1.16044 5.73455 1.15942ZM5.73455 9.06191C5.00371 8.24552 3.34464 6.20357 3.34464 4.5053C3.34464 3.87146 3.59643 3.26357 4.04463 2.81538C4.49282 2.36718 5.10071 2.11539 5.73455 2.11539C6.36839 2.11539 6.97628 2.36718 7.42447 2.81538C7.87267 3.26357 8.12446 3.87146 8.12446 4.5053C8.12446 6.20023 6.46443 8.24456 5.73455 9.06191Z" fill="#AFAFAF"/>
+      <path d="M5.73473 3.07129C5.45112 3.07129 5.17388 3.15539 4.93807 3.31295C4.70226 3.47052 4.51847 3.69447 4.40993 3.95649C4.3014 4.21851 4.27301 4.50683 4.32833 4.78499C4.38366 5.06314 4.52023 5.31865 4.72078 5.51919C4.92132 5.71973 5.17682 5.8563 5.45498 5.91163C5.73314 5.96696 6.02146 5.93856 6.28348 5.83003C6.5455 5.7215 6.76945 5.53771 6.92701 5.3019C7.08458 5.06608 7.16868 4.78884 7.16868 4.50524C7.16868 4.12493 7.0176 3.7602 6.74868 3.49128C6.47977 3.22237 6.11504 3.07129 5.73473 3.07129ZM5.73473 4.98322C5.64019 4.98322 5.54778 4.95519 5.46918 4.90266C5.39057 4.85014 5.32931 4.77549 5.29313 4.68815C5.25695 4.60081 5.24749 4.50471 5.26593 4.41199C5.28437 4.31927 5.3299 4.2341 5.39675 4.16725C5.46359 4.10041 5.54876 4.05488 5.64148 4.03644C5.7342 4.018 5.83031 4.02746 5.91765 4.06364C6.00499 4.09982 6.07964 4.16108 6.13216 4.23968C6.18468 4.31829 6.21271 4.4107 6.21271 4.50524C6.21271 4.63201 6.16235 4.75358 6.07271 4.84322C5.98308 4.93286 5.8615 4.98322 5.73473 4.98322Z" fill="#AFAFAF"/>
+    </svg>
+    <span>300027, Москва</span>
+  </a> -->
 										<a href="mailto:admin@sintec.ru">
 											<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M1.75977 1.91187V9.55959H11.3194V1.91187H1.75977ZM5.57454 6.5483L6.53959 7.29729L7.50464 6.5483L10.0767 8.60362H3.00252L5.57454 6.5483ZM2.71573 7.60894V4.32281L4.7983 5.94269L2.71573 7.60894ZM8.28088 5.94269L10.3635 4.32329V7.60894L8.28088 5.94269ZM10.3635 2.86783V3.11208L6.53959 6.08609L2.71573 3.11208V2.86783H10.3635Z" fill="#AFAFAF" />
@@ -319,7 +321,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<a href="#" class="location"><img src="img/location.png"> 300027, Москва </a>
+						<!-- <a href="#" class="location"><img src="img/location.png"> 300027, Москва </a> -->
 						<a href="mailto:admin@no-fake.club" class="mail"><img src="img/mail.png"> admin@no-fake.club</a>
 					</div>
 					<div class="col-md-6 right-foot">
@@ -337,8 +339,8 @@
 	</footer>
 	<script>
 		(function() {
-			$('.form-contacts #inputEmail5').focus(function() {
-				$('.form-contacts #inputEmail5').closest('.form-group').removeClass('_error');
+			$('.form-contacts .inputEmail5').focus(function() {
+				$('.form-contacts .inputEmail5').closest('.form-group').removeClass('_error');
 				$(".error-contact").text("");
 			})
 			$('.form-contacts #zagolovok').focus(function() {
@@ -424,10 +426,10 @@
 		// });
 	</script>
 
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js?_v=20221110020650" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js?_v=20221110020650" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js?_v=20221110020650"></script>
-	<script src="js/app.min.js?_v=20221110020650"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js?_v=20221115124541" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js?_v=20221115124541" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js?_v=20221115124541"></script>
+	<script src="js/app.min.js?_v=20221115124541"></script>
 
 	<app-content ng-version="14.2.0"></app-content><app-content></app-content><app-content></app-content>
 </body><app-content></app-content>
