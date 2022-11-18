@@ -3937,6 +3937,16 @@
                     formValidate.removeError(targetElement);
                 }
             }));
+            document.body.addEventListener("input", (function(e) {
+                const targetElement = e.target;
+                if ("INPUT" === targetElement.tagName || "TEXTAREA" === targetElement.tagName) {
+                    if (targetElement.dataset.placeholder) targetElement.placeholder = "";
+                    if (!targetElement.hasAttribute("data-no-focus-classes")) {
+                        targetElement.classList.add("_form-input");
+                        targetElement.parentElement.classList.add("_form-input");
+                    }
+                }
+            }));
             document.body.addEventListener("focusout", (function(e) {
                 const targetElement = e.target;
                 if ("INPUT" === targetElement.tagName || "TEXTAREA" === targetElement.tagName) {
@@ -3944,6 +3954,10 @@
                     if (!targetElement.hasAttribute("data-no-focus-classes")) {
                         targetElement.classList.remove("_form-focus");
                         targetElement.parentElement.classList.remove("_form-focus");
+                        if (!targetElement.value.trim()) {
+                            targetElement.classList.remove("_form-input");
+                            targetElement.parentElement.classList.remove("_form-input");
+                        }
                     }
                     if (targetElement.hasAttribute("data-validate")) formValidate.validateInput(targetElement);
                 }
@@ -4660,7 +4674,7 @@
         tabs();
         showMore();
         formFieldsInit({
-            viewPass: false
+            viewPass: true
         });
         formSubmit();
     })();

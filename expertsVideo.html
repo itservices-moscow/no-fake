@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css?_v=20221115124541" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-	<link href="files/styles.css?_v=20221115124541" rel="stylesheet">
-	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js?_v=20221115124541"></script>
-	<link rel="stylesheet" href="css/style.min.css?_v=20221115124541">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css?_v=20221118105500" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link href="files/styles.css?_v=20221118105500" rel="stylesheet">
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js?_v=20221118105500"></script>
+	<link rel="stylesheet" href="css/style.min.css?_v=20221118105500">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,7 +84,7 @@
 						<div class="col-2">
 							<!-- <a href="home.html"><img src="img/bottom-logo.png" style="width: 45px;"></a> -->
 							<button type="button" class="menu__icon icon-menu"><span></span></button>
-							<div data-menu-close></div>
+							<div data-menu-close class="menu_close"></div>
 						</div>
 						<div class="col-4">
 							<a href="#" class="help-a">
@@ -109,6 +109,37 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="mobile-menu _mmd600dn">
+					<div class="mobile-menu__close" data-menu-close></div>
+					<div class="mobile-menu__user">
+						<div class="bottom-newsNovosti__author">
+							<div class="bottom-newsNovosti__avatar"></div>
+							<div class="bottom-newsNovosti__name">
+								Имя Фамилия
+							</div>
+						</div>
+					</div>
+					<div class="mobile-menu__body">
+						<div class="mobile-menu__item">
+							<a href="cabinet.html" class="mobile-menu__link">Профиль</a>
+							<a href="home.html" class="mobile-menu__link">Главная</a>
+							<a href="expertsVideo.html" class="mobile-menu__link">Видео</a>
+							<a href="novosti.html" class="mobile-menu__link">Новости</a>
+						</div>
+						<div class="mobile-menu__item">
+							<a href="o-proekte.html" class="mobile-menu__link">О проекте</a>
+							<a href="contacts.html" class="mobile-menu__link">Контакты</a>
+						</div>
+						<div class="mobile-menu__item">
+							<a href="docs.html" class="mobile-menu__link">Документы</a>
+							<a href="pravila.html" class="mobile-menu__link">Правила общения</a>
+						</div>
+						<div class="mobile-menu__item">
+							<a href="mnenie-experta.html" class="mobile-menu__link">Вопрос эксперту</a>
+						</div>
+					</div>
+					<a href="#" class="mobile-menu__logout">Выход</a>
 				</div>
 			</div>
 		</header>
@@ -904,7 +935,7 @@
 										<li><a href="mnenie-experta.html">Вопрос к эксперту</a></li>
 										<li><a href="pravila.html">Правила общения</a></li>
 										<li><a href="o-proekte.html">О проекте</a></li>
-										<li class="_mmd3dn footer_socials">
+										<li class="_mmd600dn footer_socials">
 											<!-- <a href="contacts.html">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.73455 1.15942C4.84748 1.16044 3.99703 1.51327 3.36977 2.14053C2.74252 2.76778 2.38968 3.61823 2.38867 4.5053C2.38867 7.06394 5.27377 9.9782 5.39662 10.101L5.73455 10.439L6.07248 10.101C6.19532 9.9782 9.08043 7.06394 9.08043 4.5053C9.07942 3.61823 8.72658 2.76778 8.09932 2.14053C7.47207 1.51327 6.62162 1.16044 5.73455 1.15942ZM5.73455 9.06191C5.00371 8.24552 3.34464 6.20357 3.34464 4.5053C3.34464 3.87146 3.59643 3.26357 4.04463 2.81538C4.49282 2.36718 5.10071 2.11539 5.73455 2.11539C6.36839 2.11539 6.97628 2.36718 7.42447 2.81538C7.87267 3.26357 8.12446 3.87146 8.12446 4.5053C8.12446 6.20023 6.46443 8.24456 5.73455 9.06191Z" fill="#AFAFAF"/>
@@ -982,9 +1013,9 @@
 	</div>
 </div> -->
 
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js?_v=20221115124541" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js?_v=20221115124541" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20221115124541"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js?_v=20221118105500" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js?_v=20221118105500" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20221118105500"></script>
 </body>
 
 </html>
