@@ -1078,7 +1078,9 @@ ul {
   }
 }
 
-.tags-novosti__item._tab-active {
+.tags-novosti__item._tab-active,
+.tags-novosti__item:active {
+  color: #fff !important;
   background-color: #E83232;
   border: 1px solid #E83232;
 }
@@ -4854,5 +4856,13 @@ svg.like.is-active path {
     border-color: #E83232;
     -webkit-box-shadow: 0px 0px 2.90092px #E83232;
             box-shadow: 0px 0px 2.90092px #E83232;
+  }
+}
+
+@media (any-hover: none) {
+  .tags-novosti__item:hover {
+    color: #fff !important;
+    background-color: #E83232;
+    border: 1px solid #E83232;
   }
 }

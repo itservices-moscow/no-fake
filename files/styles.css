@@ -507,7 +507,7 @@ label.form-label {
 input#inputEmail4,
 input.inputEmail4,
 .right-subscribe input#inputEmail4,
-.right-subscribe input.inputEmail4 {
+.right-subscribe input {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
